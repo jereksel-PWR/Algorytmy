@@ -1,0 +1,12 @@
+language: c
+compiler:
+  - gcc
+  - clang
+sudo: required
+
+install:
+  - sudo apt-get install python3
+
+script:
+  - mkdir build && cd build && cmake ../ && make && cd ..
+  - ./script/test.sh
